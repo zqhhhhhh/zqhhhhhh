@@ -250,6 +250,10 @@ button:focus {
   width: 100%;
 }
 
+/* .navbar-nav .nav-item a.active::after {
+  width: 100%;
+} */
+
 /* --------- */
 /* Home section */
 /* --------- */
@@ -539,7 +543,7 @@ button:focus {
   position: relative !important;
   padding-top: 150px !important;
   padding-bottom: 30px !important;
-  background-image: var(--section-background-color) !important;
+  /* background-image: var(--section-background-color) !important; */
 }
 
 .project-card {
@@ -637,7 +641,7 @@ button:focus {
   position: relative !important;
   padding-top: 150px !important;
   padding-bottom: 30px !important;
-  background-image: var(--section-background-color) !important;
+  /* background-image: var(--section-background-color) !important; */
   color: white !important;
 }
 
@@ -697,7 +701,7 @@ button:focus {
   position: relative !important;
   padding-top: 110px !important;
   padding-bottom: 30px !important;
-  background-image: var(--section-background-color) !important;
+  /* background-image: var(--section-background-color) !important; */
   color: white !important;
 }
 

@@ -2,89 +2,86 @@ import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import ProjectCard from "./ProjectCards";
 import Particle from "../Particle";
-import leaf from "../../Assets/Projects/leaf.png";
-import emotion from "../../Assets/Projects/emotion.png";
-import editor from "../../Assets/Projects/codeEditor.png";
-import chatify from "../../Assets/Projects/chatify.png";
-import suicide from "../../Assets/Projects/suicide.png";
-import bitsOfCode from "../../Assets/Projects/blog.png";
+import qraftEngineImg from "../../Assets/Projects/Qraft.png";
+import moxartImg from "../../Assets/Projects/MoXaRt.webp";
+import searchEngineImg from "../../Assets/Projects/Search_Engine.png";
+import edgeOfGravityImg from "../../Assets/Projects/Edge_of_Gravity.jpg";
+import noRoomForChaosImg from "../../Assets/Projects/No_Room_for_Chaos.jpg";
 
 function Projects() {
+  const edgeOfGravityBooklet = `${process.env.PUBLIC_URL}/projects/Edge_of_Gravity_booklet.pdf`;
+  const noRoomForChaosPoster = `${process.env.PUBLIC_URL}/projects/No_Room_for_Chaos_poster.pdf`;
+  const noRoomForChaosTrailer = `${process.env.PUBLIC_URL}/projects/No_Room_for_Chaos_trailer.mp4`;
+
   return (
     <Container fluid className="project-section">
       <Particle />
       <Container>
         <h1 className="project-heading">
-          My Recent <strong className="purple">Works </strong>
+          <strong className="purple">Portfolio</strong>
         </h1>
         <p style={{ color: "white" }}>
-          Here are a few projects I've worked on recently.
+          A quick view of the systems, products, and research work I have built or contributed to.
         </p>
+
         <Row style={{ justifyContent: "center", paddingBottom: "10px" }}>
           <Col md={4} className="project-card">
             <ProjectCard
-              imgPath={chatify}
-              isBlog={false}
-              title="Chatify"
-              description="Personal Chat Room or Workspace to share resources and hangout with friends build with react.js, Material-UI, and Firebase. Have features which allows user for realtime messaging, image sharing as well as supports reactions on messages."
-              ghLink="https://github.com/soumyajit4419/Chatify"
-              demoLink="https://chatify-49.web.app/"
+              imgPath={qraftEngineImg}
+              title="Qraft Engine"
+              description="A 2D game engine built with C++17, Lua, LuaBridge, GLM, SDL2, and Box2D, featuring actor-component architecture, scene loading, rigidbody physics, raycasting, an EventBus system, a particle system, and an ImGui-based scene editor."
+              links={[
+                { label: "GitHub", href: "https://github.com/zqhhhhhh/Qraft-Engine", kind: "github" },
+                { label: "Demo", href: "https://www.youtube.com/watch?v=BBjlg-sMpcE", kind: "web" },
+              ]}
             />
           </Col>
 
           <Col md={4} className="project-card">
             <ProjectCard
-              imgPath={bitsOfCode}
-              isBlog={false}
-              title="Bits-0f-C0de"
-              description="My personal blog page build with Next.js and Tailwind Css which takes the content from makdown files and renders it using Next.js. Supports dark mode and easy to write blogs using markdown."
-              ghLink="https://github.com/soumyajit4419/Bits-0f-C0de"
-              demoLink="https://blogs.soumya-jit.tech/"
+              imgPath={moxartImg}
+              title="MoXaRt"
+              description="A real-time XR system that uses audio-visual cues to separate overlapping voices and instruments in complex environments. I contributed to the synchronized dataset, end-to-end evaluation pipeline, and system-level optimization for this CHI 2026 accepted work."
+              links={[
+                { label: "Paper", href: "https://arxiv.org/abs/2603.10465", kind: "web" },
+                { label: "Demo", href: "https://drive.google.com/file/d/19JB9B2XUYLPcUVD_z5CPuLbmsacZjFue/view?usp=sharing", kind: "web" },
+              ]}
             />
           </Col>
 
           <Col md={4} className="project-card">
             <ProjectCard
-              imgPath={editor}
-              isBlog={false}
-              title="Editor.io"
-              description="Online code and markdown editor build with react.js. Online Editor which supports html, css, and js code with instant view of website. Online markdown editor for building README file which supports GFM, Custom Html tags with toolbar and instant preview.Both the editor supports auto save of work using Local Storage"
-              ghLink="https://github.com/soumyajit4419/Editor.io"
-              demoLink="https://editor.soumya-jit.tech/"              
+              imgPath={searchEngineImg}
+              title="Search Engine System"
+              description="A large-scale search engine built in C++ from scratch over 30M+ webpages and 240GB of data, from crawling and indexing to constraint solving, retrieval, ranking, and frontend serving. I worked on the multithreaded crawler and the high-performance inverted index."
+              links={[
+                { label: "Demo", href: "https://drive.google.com/file/d/14IXclVzGSuWGfr02a0Ca66xePWN0XvMg/view?usp=sharing", kind: "web" },
+              ]}
             />
           </Col>
 
           <Col md={4} className="project-card">
             <ProjectCard
-              imgPath={leaf}
-              isBlog={false}
-              title="Plant AI"
-              description="Used the plant disease dataset from Kaggle and trained a image classifer model using 'PyTorch' framework using CNN and Transfer Learning with 38 classes of various plant leaves. The model was successfully able to detect diseased and healthy leaves of 14 unique plants. I was able to achieve an accuracy of 98% by using Resnet34 pretrained model."
-              ghLink="https://github.com/soumyajit4419/Plant_AI"
-              demoLink="https://plant49-ai.herokuapp.com/"
+              imgPath={edgeOfGravityImg}
+              title="Edge of Gravity"
+              description="A browser-based paddle game developed in Elm, highlighting gameplay design, interaction flow, and clean functional programming for web deployment."
+              links={[
+                { label: "Play", href: "https://focs.ji.sjtu.edu.cn/silverfocs/demo/2023/p1team01/", kind: "web" },
+                { label: "Booklet", href: edgeOfGravityBooklet, kind: "web" },
+              ]}
             />
           </Col>
 
           <Col md={4} className="project-card">
             <ProjectCard
-              imgPath={suicide}
-              isBlog={false}
-              title="Ai For Social Good"
-              description="Using 'Natural Launguage Processing' for the detection of suicide-related posts and user's suicide ideation in cyberspace  and thus helping in sucide prevention."
-              ghLink="https://github.com/soumyajit4419/AI_For_Social_Good"
-              // demoLink="https://www.youtube.com/watch?v=dQw4w9WgXcQ&ab_channel=RickAstley" <--------Please include a demo link here
-            />
-          </Col>
-
-          <Col md={4} className="project-card">
-            <ProjectCard
-              imgPath={emotion}
-              isBlog={false}
-              title="Face Recognition and Emotion Detection"
-              description="Trained a CNN classifier using 'FER-2013 dataset' with Keras and tensorflow backened. The classifier sucessfully predicted the various types of emotions of human. And the highest accuracy obtained with the model was 60.1%.
-              Then used Open-CV to detect the face in an image and then pass the face to the classifer to predict the emotion of a person."
-              ghLink="https://github.com/soumyajit4419/Face_And_Emotion_Detection"
-              // demoLink="https://blogs.soumya-jit.tech/"      <--------Please include a demo link here 
+              imgPath={noRoomForChaosImg}
+              title="No Room for Chaos"
+              description="A roguelike shooting web game implemented in Elm, focused on engaging interaction loops, lightweight browser gameplay, and polished visual presentation."
+              links={[
+                { label: "Play", href: "https://focs.ji.sjtu.edu.cn/silverfocs/demo/2023/p2team01/", kind: "web" },
+                { label: "Trailer", href: noRoomForChaosTrailer, kind: "web" },
+                { label: "Poster", href: noRoomForChaosPoster, kind: "web" },
+              ]}
             />
           </Col>
         </Row>

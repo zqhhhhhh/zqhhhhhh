@@ -20,7 +20,7 @@ function About() {
         <Row style={{ justifyContent: "center", padding: "10px" }}>
           <Col md={8} style={{ paddingTop: "10px", paddingBottom: "50px" }}>
             <h1 style={{ fontSize: "2.6em" }}>
-              Nice to <span className="purple"> meet </span> you!
+              Nice to <span className="purple"> meet </span> you here!
             </h1>
             <p className="home-about-body">
               I'm an undergraduate student pursuing a dual-degree program between the{" "}
@@ -28,7 +28,7 @@ function About() {
               <a className="custom_link" href="https://en.sjtu.edu.cn">Shanghai Jiao Tong University</a>,
               earning a
               <b className="purple"> B.S.E. in Computer Science </b> from UMich and a
-              <b className="purple"> B.Eng. in Mechanical Engineering</b> from SJTU.
+              <b className="purple"> B.S.E. in Mechanical Engineering</b> from SJTU.
               <br />
               <br />
               This interdisciplinary education allows me to integrate hardware and software perspectives across engineering domains.
@@ -63,7 +63,7 @@ function About() {
       </Container>
 
       {/* Education */}
-      <Container>
+      {/* <Container>
         <h1 style={{ fontSize: "2.5em" }}>
           <span className="purple"> Education </span> Bakground
         </h1>
@@ -79,10 +79,10 @@ function About() {
             </ul>
           </Col>
         </Row>
-      </Container>
+      </Container> */}
 
       {/* Honors */}
-      <Container>
+      {/* <Container>
         <h2 className="project-heading">
           <strong className="purple">Honors & Awards</strong>
         </h2>
@@ -95,10 +95,10 @@ function About() {
             </ul>
           </Col>
         </Row>
-      </Container>
+      </Container> */}
 
       {/* Projects */}
-      <Container>
+      {/* <Container>
         <h2 className="project-heading">
           <strong className="purple">Projects</strong>
         </h2>
@@ -117,10 +117,10 @@ function About() {
             </ul>
           </Col>
         </Row>
-      </Container>
+      </Container> */}
 
       {/* Activities */}
-      <Container>
+      {/* <Container>
         <h2 className="project-heading">
           <strong className="purple">Activities</strong>
         </h2>
@@ -133,7 +133,7 @@ function About() {
             </ul>
           </Col>
         </Row>
-      </Container>
+      </Container> */}
     </Container>
   );
 }

@@ -32,7 +32,7 @@ function Projects() {
               description="A 2D game engine built with C++17, Lua, LuaBridge, GLM, SDL2, and Box2D, featuring actor-component architecture, scene loading, rigidbody physics, raycasting, an EventBus system, a particle system, and an ImGui-based scene editor."
               links={[
                 { label: "GitHub", href: "https://github.com/zqhhhhhh/Qraft-Engine", kind: "github" },
-                { label: "Demo", href: "https://www.youtube.com/watch?v=BBjlg-sMpcE", kind: "web" },
+                { label: "Demo", href: "https://www.youtube.com/watch?v=6ty8wd_-XEU", kind: "web" },
               ]}
             />
           </Col>

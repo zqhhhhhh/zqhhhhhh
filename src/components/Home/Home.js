@@ -58,12 +58,13 @@
 
 import React, { useEffect, useRef, useState } from "react";
 import { Container, Row, Col } from "react-bootstrap";
-import { BiChevronDown } from "react-icons/bi";
+import { Link, useNavigate } from "react-router-dom";
 import homeLogo from "../../Assets/Tree.jpg";
 import Particle from "../Particle";
 import Type from "./Type";
 
 function Home() {
+  const navigate = useNavigate();
   const [scrollTriggered, setScrollTriggered] = useState(false);
   const startYRef = useRef(null); // 记录起始滑动位置
   const symbolRef = useRef(null); // 图标引用
@@ -74,10 +75,10 @@ function Home() {
       if (symbolRef.current) {
         symbolRef.current.classList.add("active-glow");
         setTimeout(() => {
-          window.location.href = "/about"; // ✅ 强制刷新跳转
+          navigate("/about");
         }, 300);
       } else {
-        window.location.href = "/about";
+        navigate("/about");
       }
     }
   };
@@ -93,10 +94,10 @@ function Home() {
         if (symbolRef.current) {
           symbolRef.current.classList.add("active-glow");
           setTimeout(() => {
-            window.location.href = "/about";
+            navigate("/about");
           }, 300);
         } else {
-          window.location.href = "/about";
+          navigate("/about");
         }
       }
     };
@@ -155,7 +156,7 @@ function Home() {
       document.removeEventListener("mousedown", handleMouseDown);
       document.removeEventListener("mouseup", handleMouseUp);
     };
-  }, [scrollTriggered]);
+  }, [scrollTriggered, navigate]);
 
   return (
     <section>
@@ -189,14 +190,13 @@ function Home() {
         {/* 翻页按钮 */}
         <Row className="justify-content-center">
           <Col md="auto">
-            <div
+            <Link
+              to="/about"
               className="page-flip-link"
               onClick={(e) => {
                 e.preventDefault();
                 triggerScrollToAbout();
               }}
-              tabIndex={0}
-              role="button"
               onKeyDown={(e) => {
                 if (["Enter", " ", "ArrowDown"].includes(e.key)) {
                   e.preventDefault();
@@ -204,13 +204,10 @@ function Home() {
                 }
               }}
             >
-              <div
-                ref={symbolRef}
-                className="page-flip-symbol"
-              >
+              <div ref={symbolRef} className="page-flip-symbol">
                 &#xFE3E;
               </div>
-            </div>
+            </Link>
           </Col>
         </Row>
       </Container>

@@ -17,7 +17,7 @@ function NavBar() {
   return (
     <Navbar expanded={expand} fixed="top" expand="md" className="sticky">
       <Container>
-        <Navbar.Brand href="/" className="d-flex">
+        <Navbar.Brand as={Link} to="/" className="d-flex" onClick={() => updateExpanded(false)}>
           <img src={logo} className="img-fluid logo" alt="Qianhui Zheng" />
         </Navbar.Brand>
         <Navbar.Toggle

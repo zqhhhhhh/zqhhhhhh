@@ -5,6 +5,7 @@ import Particle from "../Particle";
 import qraftEngineImg from "../../Assets/Projects/Qraft.png";
 import moxartImg from "../../Assets/Projects/MoXaRt.webp";
 import searchEngineImg from "../../Assets/Projects/Search_Engine.png";
+import financialQaImg from "../../Assets/Projects/Financial_Q&A.png";
 import edgeOfGravityImg from "../../Assets/Projects/Edge_of_Gravity.jpg";
 import noRoomForChaosImg from "../../Assets/Projects/No_Room_for_Chaos.jpg";
 
@@ -56,6 +57,18 @@ function Projects() {
               description="A large-scale search engine built in C++ from scratch over 30M+ webpages and 240GB of data, from crawling and indexing to constraint solving, retrieval, ranking, and frontend serving. I worked on the multithreaded crawler and the high-performance inverted index."
               links={[
                 { label: "Demo", href: "https://drive.google.com/file/d/14IXclVzGSuWGfr02a0Ca66xePWN0XvMg/view?usp=sharing", kind: "web" },
+              ]}
+            />
+          </Col>
+
+          <Col md={4} className="project-card">
+            <ProjectCard
+              imgPath={financialQaImg}
+              title="Financial Asset QA System"
+              description="An LLM+RAG Chinese financial QA system for real-time asset analysis and financial knowledge QA, delivering structured, data-driven answers."
+              links={[
+                { label: "GitHub", href: "https://github.com/zqhhhhhh/Financial-Asset-QA-System", kind: "github" },
+                { label: "Demo", href: "https://www.youtube.com/watch?v=BBjlg-sMpcE", kind: "web" },
               ]}
             />
           </Col>

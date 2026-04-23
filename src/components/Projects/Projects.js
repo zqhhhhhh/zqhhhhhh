@@ -68,7 +68,7 @@ function Projects() {
               description="An LLM+RAG Chinese financial QA system for real-time asset analysis and financial knowledge QA, delivering structured, data-driven answers."
               links={[
                 { label: "GitHub", href: "https://github.com/zqhhhhhh/Financial-Asset-QA-System", kind: "github" },
-                { label: "Demo", href: "https://www.youtube.com/watch?v=BBjlg-sMpcE", kind: "web" },
+                { label: "Demo", href: "https://www.youtube.com/watch?v=pkbnxqPzyDk", kind: "web" },
               ]}
             />
           </Col>
